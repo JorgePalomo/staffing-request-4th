@@ -8,9 +8,9 @@ define(['flight/lib/component'], function(defineComponent) {
     // component definition
     function tags() {
         this.after('initialize', function() {
-            this.$node.tagsinput({
-                
-            });
+            $('input').tagsinput({
+  			tagClass: 'big'
+			});
         });
     }
 

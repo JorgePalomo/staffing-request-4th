@@ -30,10 +30,7 @@ define(
             name: 'companyName',
             fromData: '/suggest/clients.json'
         });
-        TagsUI.attachTo('#requiredSkills', {
-            name: 'requiredSkills',
-           
-        });
+        TagsUI.attachTo('.tagsinput');
     }
 
 });
