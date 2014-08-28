@@ -26,7 +26,9 @@ var StaffingRequestSchema = new Schema({
     travelRequired: {
         type: String,
         enum: ['Possible', 'Yes', 'No']
-    }
+    },
+    requiredSkills: String
+   
 });
 
 StaffingRequestSchema.statics.findByRequestNo = function(requestNo, cb) {
