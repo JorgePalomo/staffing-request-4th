@@ -30,7 +30,7 @@ define(
             name: 'companyName',
             fromData: '/suggest/clients.json'
         });
-        TagsUI.attachTo('.tagsinput');
+        TagsUI.attachTo('[data-role=tagsinput]');
     }
 
 });
