@@ -36,7 +36,7 @@ define(['flight/lib/component'], function(defineComponent) {
                 newOrBackfill: $.trim(this.select('newOrBackfillSelector').text()),
                 positionName: this.select('positionNameSelector').val(),
                 travelRequired: $.trim(this.select('travelRequiredSelector').text()),
-                requiredSkills: this.select('requiredSkills').val()
+                requiredSkills: this.select('requiredSkillsSelector').val()
             };
 
             this.trigger('uiRequestSubmitted', data);

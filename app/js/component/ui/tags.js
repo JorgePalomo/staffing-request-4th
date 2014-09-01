@@ -7,17 +7,9 @@ define(['flight/lib/component'], function(defineComponent) {
 
     // component definition
     function tags() {
-        
-
-        this.oninput = function(event) {
-        event.stopPropagation();
-        return this.$node.attr('data-role=tagsinput');
-        };
-
-    // initialize
-       this.after('initialize', function() {
-      this.on('input', this.oninput);
-      });
+        this.after('initialize', function() {
+            this.$node.tagsInput();
+        });
     }
 
 });

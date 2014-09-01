@@ -27,7 +27,7 @@ var StaffingRequestSchema = new Schema({
         type: String,
         enum: ['Possible', 'Yes', 'No']
     },
-    requiredSkills: String
+    requiredSkills: String,
    
 });
 

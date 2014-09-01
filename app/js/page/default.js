@@ -9,6 +9,7 @@ define(
         'component_ui/multiple_choice',
         'component_ui/suggest',
         'component_ui/tags',
+        
     ],
 
     function(
@@ -30,7 +31,7 @@ define(
             name: 'companyName',
             fromData: '/suggest/clients.json'
         });
-        TagsUI.attachTo('[data-role=tagsinput]');
+        TagsUI.attachTo('#requiredSkills');
     }
 
 });

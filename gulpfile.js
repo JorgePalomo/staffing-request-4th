@@ -52,7 +52,8 @@ gulp.task('lib', function() {
         './bower_components/typeahead.js/dist/typeahead.bundle.js',
         './bower_components/moment/moment.js',
         './bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js',
-        './bower_components/bootstrap-tagsinput-master/src/js/bootstrap-tagsinput.js',
+        './bower_components/bootstrap-tagsinput/src/js/bootstrap-tagsinput.js',
+        './bower_components/jquery-tags-input/jquery.js',
         './bower_components/requirejs/require.js'])
         .pipe(uglify())
         .pipe(concat('lib.js'))
