@@ -22,7 +22,7 @@ var StaffingRequestSchema = new Schema({
         type: String,
         enum: ['New', 'Backfill']
     },
-    positionName: String,
+    location: String,
     travelRequired: {
         type: String,
         enum: ['Possible', 'Yes', 'No']
