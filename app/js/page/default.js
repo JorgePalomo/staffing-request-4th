@@ -8,7 +8,7 @@ define(
         'component_ui/date_picker',
         'component_ui/multiple_choice',
         'component_ui/suggest',
-        //'component_ui/tags',
+        'component_ui/tags',
         
     ],
 
@@ -18,8 +18,7 @@ define(
         DatePickerUI,
         MultipleChoiceUI,
         SuggestUI,
-        //TagsUI
-        )
+        TagsUI)
          {
 
     return initialize;
@@ -33,8 +32,8 @@ define(
             name: 'companyName',
             fromData: '/suggest/clients.json'
         });
-        //TagsUI.attachTo('#requiredSkills');
-         //TagsUI.attachTo('#location');
+        TagsUI.attachTo('#requiredSkills');
+        TagsUI.attachTo('#location');
     }
 
 });
