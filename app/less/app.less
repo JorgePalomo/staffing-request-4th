@@ -55,16 +55,6 @@ label {
   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
-.size(@width; @height) {
-  width: @width;
-  height: @height;
-}
-.square(@size) {
-  .size(@size; @size);
-}
-
-.input{ .size(20px;100px);}
-
 .tt-suggestion {
   padding: 3px 20px;
 }
@@ -77,3 +67,17 @@ label {
 .tt-suggestion p {
   margin: 0;
 }
+
+.bootstrap-tagsinput {
+ 
+  display: block;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  border-radius: 4px;
+  max-width: 100%;  
+  line-height: 150%;
+  }
+
+.form-control:focus {
+ border: 1px solid @input-border;
+ box-shadow: none;
+  }
