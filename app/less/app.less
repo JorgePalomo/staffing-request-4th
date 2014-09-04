@@ -75,9 +75,19 @@ label {
   border-radius: 4px;
   max-width: 100%;  
   line-height: 150%;
+
+  input {
+    min-width: 100%;
+    &:focus{
+    min-width: 40%
+    }
+
+   
   }
+}
 
 .form-control:focus {
  border: 1px solid @input-border;
  box-shadow: none;
   }
+
