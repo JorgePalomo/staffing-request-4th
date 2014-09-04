@@ -9,7 +9,8 @@ define(
         'component_ui/multiple_choice',
         'component_ui/suggest',
         'component_ui/tags',
-        
+        'component_ui/toggle_tags',
+
     ],
 
     function(
@@ -18,7 +19,9 @@ define(
         DatePickerUI,
         MultipleChoiceUI,
         SuggestUI,
-        TagsUI)
+        TagsUI,
+        ToggleTagsUI
+        )
          {
 
     return initialize;
@@ -33,6 +36,7 @@ define(
             fromData: '/suggest/clients.json'
         });
         TagsUI.attachTo('#requiredSkills');
+        ToggleTagsUI.attachTo('requiredSkills');
         TagsUI.attachTo('#location');
     }
 

@@ -19,6 +19,7 @@
     "typeahead.js": "~0.10.5",
     "eonasdan-bootstrap-datetimepicker": "~3.1.1",
     "bootstrap-tagsinput": "~0.4.2",
-    "jquery-tags-input": "~1.3.2"
+    "jquery-tags-input": "~1.3.2",
+    "jQuery-Function-Toggle-Plugin": "https://github.com/fkling/jQuery-Function-Toggle-Plugin"
   }
 }
