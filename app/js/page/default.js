@@ -9,7 +9,7 @@ define(
         'component_ui/multiple_choice',
         'component_ui/suggest',
         'component_ui/tags',
-        'component_ui/toggle_tags',
+        
 
     ],
 
@@ -19,8 +19,8 @@ define(
         DatePickerUI,
         MultipleChoiceUI,
         SuggestUI,
-        TagsUI,
-        ToggleTagsUI
+        TagsUI
+        
         )
          {
 
@@ -35,9 +35,13 @@ define(
             name: 'companyName',
             fromData: '/suggest/clients.json'
         });
-        TagsUI.attachTo('#requiredSkills');
-        ToggleTagsUI.attachTo('requiredSkills');
-        TagsUI.attachTo('#location');
+        TagsUI.attachTo('#requiredSkills',{
+            toggleIndicator: true,
+            
+        });
+        TagsUI.attachTo('#location',{
+            toggleIndicator: false
+        });
     }
 
 });
