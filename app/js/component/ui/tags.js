@@ -11,40 +11,30 @@ define(['flight/lib/component'], function(defineComponent) {
     function tags() {
 
 
-    	 this.defaultAttrs({
-         toggleIndicator: true,
-         tagSelector: '.bootstrap-tagsinput .tag'
+         this.defaultAttrs({
+         toggleIndicator: true,       
          });
 
-        
-          this.changeTagColor = function(event) {
-            event.preventDefault();            
-            $('tagSelector').toggleClass( 'label-info');
-            $('tagSelector').toggleClass( 'label-danger');           
-        };
+         this.changeTagColor = function(event) {
+            event.preventDefault();
+            $('div.bootstrap-tagsinput.tag').toggleClass( 'label-info');
+            $('div.bootstrap-tagsinput.tag').toggleClass( 'label-danger');           
+          };
 
 
-        this.after('initialize', function() {
+            this.after('initialize', function() {
 
-          	
-          	this.$node.tagsinput();
+             this.$node.tagsinput();
 
-          	var toggleIndicator = this.attr.toggleIndicator;
-
-        	if(toggleIndicator===true){
-        		
-        	 this.on('click', {
-             'tagSelector': this.changeTagColor,
+             var toggleIndicator = this.attr.toggleIndicator;
+              if(toggleIndicator===true){        		
+              this.on('click', this.changeTagColor);             
+              }
+              else{  	 
+        	 	
+        	  }
             
              });
-             
-        	}
-        	else{
-        	 
-        	 	
-        	}
-            
-        });
     }
 
 });
