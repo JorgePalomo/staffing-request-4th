@@ -11,33 +11,37 @@ define(['flight/lib/component'], function(defineComponent) {
     function tags() {
 
 
-         this.defaultAttrs({
-         toggleIndicator: true,       
-         });
-
+        this.defaultAttrs({
+        toggleIndicator: true,
+        requiredSkillsSelector: '#requiredSkills',
+        });
       
-            this.handleClick=function(event) {
-            //event.stopPropagation();
-            event.preventDefault();
-            console.log('Click Event**');
-            $('form-group.bootstrap-tagsinput.tag').toggleClass( 'label-info');
-            $('form-group.bootstrap-tagsinput.tag').toggleClass( 'label-danger');
-            };
+        this.handleClick=function(event) {
+         //event.stopPropagation();
+         event.preventDefault();
+         console.log('Click Event**');
+         $('.tag').toggleClass( 'label-info');
+         $('.tag').toggleClass( 'label-danger');
+        };
 
-            this.after('initialize', function() {
+        this.after('initialize', function() {
 
-             this.$node.tagsinput();
+        this.$node.tagsinput();
 
-             var toggleIndicator = this.attr.toggleIndicator;
-              if(toggleIndicator===true){     
+        var toggleIndicator = this.attr.toggleIndicator;
 
-               this.on('click', this.handleClick);   	                                    
-               }
-              else {  	 
+          if(toggleIndicator === true) {  
+
+            this.on('click', {
+             'requiredSkillsSelector': this.handleClick
+           });   	     
+
+          }
+
+          else {  	 
         	 	
-        	     }
+          }
             
-             });
+        });
     }
-
 });

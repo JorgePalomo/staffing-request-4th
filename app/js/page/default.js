@@ -35,11 +35,11 @@ define(
             name: 'companyName',
             fromData: '/suggest/clients.json'
         });
-        TagsUI.attachTo('#requiredSkills',{
-            toggleIndicator: true,
+        TagsUI.attachTo('#requiredSkills', {
+            toggleIndicator: true
             
         });
-        TagsUI.attachTo('#location',{
+        TagsUI.attachTo('#location', {
             toggleIndicator: false
         });
     }
