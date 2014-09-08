@@ -17,11 +17,10 @@ define(['flight/lib/component'], function(defineComponent) {
         });
       
         this.handleClick=function(event) {
-         //event.stopPropagation();
-         event.preventDefault();
-         console.log('Click Event**');
+             
          $(this).toggleClass( 'label-info');
          $(this).toggleClass( 'label-danger');
+     
         };
 
         this.after('initialize', function() {
