@@ -15,24 +15,27 @@ define(['flight/lib/component'], function(defineComponent) {
          toggleIndicator: true,       
          });
 
-         this.changeTagColor = function(event) {
+      
+            this.handleClick=function(event) {
+            //event.stopPropagation();
             event.preventDefault();
-            $('div.bootstrap-tagsinput.tag').toggleClass( 'label-info');
-            $('div.bootstrap-tagsinput.tag').toggleClass( 'label-danger');           
-          };
-
+            console.log('Click Event**');
+            $('form-group.bootstrap-tagsinput.tag').toggleClass( 'label-info');
+            $('form-group.bootstrap-tagsinput.tag').toggleClass( 'label-danger');
+            };
 
             this.after('initialize', function() {
 
              this.$node.tagsinput();
 
              var toggleIndicator = this.attr.toggleIndicator;
-              if(toggleIndicator===true){        		
-              this.on('click', this.changeTagColor);             
-              }
-              else{  	 
+              if(toggleIndicator===true){     
+
+               this.on('click', this.handleClick);   	                                    
+               }
+              else {  	 
         	 	
-        	  }
+        	     }
             
              });
     }
