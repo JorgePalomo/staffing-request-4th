@@ -17,7 +17,7 @@ define(['flight/lib/component'], function(defineComponent) {
         });
       
         this.handleClick=function(event) {
-             
+        
          $(this).toggleClass( 'label-info');
          $(this).toggleClass( 'label-danger');
      
@@ -28,6 +28,7 @@ define(['flight/lib/component'], function(defineComponent) {
         this.$node.tagsinput();
 
         var toggleIndicator = this.attr.toggleIndicator;
+       
 
           if(toggleIndicator === true) {  
 
