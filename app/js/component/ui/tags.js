@@ -12,29 +12,30 @@ define(['flight/lib/component'], function(defineComponent) {
 
 
         this.defaultAttrs({
+
         toggleIndicator: true,
         tagSelector: '.tag',
+        
         });
       
         this.handleClick=function(event) {
-        
-         $(this).toggleClass( 'label-info');
-         $(this).toggleClass( 'label-danger');
-     
+         
+         $(event.target).toggleClass( 'label-info');
+         $(event.target).toggleClass( 'label-danger');
+
         };
 
         this.after('initialize', function() {
 
-        this.$node.tagsinput();
+          this.$node.tagsinput();
 
-        var toggleIndicator = this.attr.toggleIndicator;
+          var toggleIndicator = this.attr.toggleIndicator;      
        
-
           if(toggleIndicator === true) {  
 
             this.on('click', {
-             'tagSelector': this.handleClick
-           });   	     
+            'tagSelector' : this.handleClick
+            });    
 
           }
 
