@@ -14,14 +14,14 @@ define(['flight/lib/component'], function(defineComponent) {
         this.defaultAttrs({
 
         toggleIndicator: true,
-        tagSelector: '.bootstrap-tagsinput',
+        tagSelector: '.tag',
 
         });
      
         this.handleClick=function(event) {
         
-         $(event.target).children('.tag').toggleClass( 'label-info');
-         $(event.target).children('.tag').toggleClass( 'label-danger');
+         $(event.target).toggleClass( 'label-info');
+         $(event.target).toggleClass( 'label-danger');
 
         };
 
@@ -32,9 +32,10 @@ define(['flight/lib/component'], function(defineComponent) {
           var toggleIndicator = this.attr.toggleIndicator;      
        
           if(toggleIndicator === true) {  
-            
-            this.on('click', {
-            'tagSelector' : this.handleClick
+            var tagsInput = this.$node.children('.bootstrap-tagsinput');
+
+            this.on(tagsInput,'click', {
+             'tagSelector' : this.handleClick
             });    
 
           }
