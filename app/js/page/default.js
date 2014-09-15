@@ -35,7 +35,7 @@ define(
             name: 'companyName',
             fromData: '/suggest/clients.json'
         });
-        TagsUI.attachTo('.form-group', {
+        TagsUI.attachTo('#requiredSkills', {
             toggleIndicator: true
             
         });
