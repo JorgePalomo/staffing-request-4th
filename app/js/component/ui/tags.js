@@ -24,12 +24,13 @@ define(['flight/lib/component'], function(defineComponent) {
 
         this.after('initialize', function() {            
 
-            this.$node.tagsinput();
+            this.$node.children('#requiredSkills').tagsinput();
+            this.$node.children('#location').tagsinput();
 
              var toggleIndicator = this.attr.toggleIndicator;
 
             if (toggleIndicator === true) {
-                var tagsInput = this.$node.siblings('.bootstrap-tagsinput');
+                var tagsInput = this.$node.children('.bootstrap-tagsinput');
 
                 this.on(tagsInput, 'click', {
                     tagSelector: this.toggleColor
