@@ -24,12 +24,11 @@ define(['flight/lib/component'], function(defineComponent) {
 
         this.after('initialize', function() { 
 
-            var requiredSkills=this.$node.children('#requiredSkills'); 
-            var location=this.$node.children('#location'); 
+             var requiredSkills=this.$node.children('#requiredSkills'); 
+             var location=this.$node.children('#location'); 
 
-            requiredSkills.tagsinput();
-            location.tagsinput();
-
+             requiredSkills.tagsinput();
+             location.tagsinput();
             
              var toggleIndicator = this.attr.toggleIndicator;
 
