@@ -35,11 +35,10 @@ define(
             name: 'companyName',
             fromData: '/suggest/clients.json'
         });
-        TagsUI.attachTo('.form-group', {
+        TagsUI.attachTo('#requiredSkillsDiv', {
             toggleIndicator: true
-            
         });
-        TagsUI.attachTo('#location', {
+        TagsUI.attachTo('#locationDiv', {
             toggleIndicator: false
         });
     }

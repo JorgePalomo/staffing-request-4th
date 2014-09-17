@@ -22,11 +22,15 @@ define(['flight/lib/component'], function(defineComponent) {
             return false;
         };
 
-        this.after('initialize', function() {            
+        this.after('initialize', function() { 
 
-            this.$node.children('#requiredSkills').tagsinput();
-            this.$node.children('#location').tagsinput();
+            var requiredSkills=this.$node.children('#requiredSkills'); 
+            var location=this.$node.children('#location'); 
 
+            requiredSkills.tagsinput();
+            location.tagsinput();
+
+            
              var toggleIndicator = this.attr.toggleIndicator;
 
             if (toggleIndicator === true) {
