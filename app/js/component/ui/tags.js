@@ -19,13 +19,15 @@ define(['flight/lib/component'], function(defineComponent) {
 
             $(event.target).toggleClass('label-info');
             $(event.target).toggleClass('label-danger');
+           
+
             return false;
         };
 
         this.after('initialize', function() { 
             
 
-             var input=this.$node.children('.form-control'); 
+             var input=this.$node.children('input'); 
              
              input.tagsinput();
             
